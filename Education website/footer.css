@@ -1,0 +1,90 @@
+/* Start Footer */
+footer {
+    background-color: #042234;
+    color: #f9f9f9;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+.footerTop {
+    display:flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+footer hr {
+    padding: 0px 12px;
+}
+
+/* Left Section */
+.footerLeft {
+    padding-right: 20px;
+}
+
+.footerLeft img {
+    max-width: 200px; /* or any size you need */
+    height: auto;
+}
+
+.footerLeft p {
+    margin-top: 10px;
+}
+
+/* Middle Section */
+.footerMid ul{
+    padding: 0;
+    list-style: none;
+
+}
+
+.footerMid a{
+    display: block;
+    list-style: none;
+    background-color: #f9f9f9;
+    color: #042234;
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.footerMid a:hover {
+    background-color: #cb9c4e;
+}
+
+/* Right Section */
+.footerRight {
+    padding: 0 100px;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    margin-top: 10px;
+}
+
+.socialIcons ul{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+}
+
+.socialIcons li{
+    padding: 0px 4px;
+}
+
+.socialIcons img {
+    width: 24px; /* adjust as needed */
+    height: 24px; /* adjust as needed */
+}
+
+/* Text at the bottom of footer */
+.endSection{
+    display: flex;
+    justify-content: center; 
+    align-items: center;                    
+}
+
+/* Footer end */

@@ -1,0 +1,202 @@
+html, body {
+    margin:0;
+    padding:0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+}
+
+/* Full body part, easier for tuning */
+#mainBody {
+    display: flex;
+    min-height: 100vh;
+}
+
+#leftBody {
+    float: left;
+    width: 220px;  
+    box-sizing: border-box; 
+    background-color: #cb9c4e;
+    padding-right: 100px;
+}
+
+#rightBody {
+    flex-grow: 1;
+}
+
+#mainContent {
+    float: right;
+    width: 95%;  
+    box-sizing: border-box;
+}
+
+.clearfix::after {  /* To clear the float */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Main Content on right side */
+
+
+#mainContent{
+    flex:1;
+}
+
+#allOnlineClass {
+    margin-top:50px;
+    margin-left:10px;
+    width:800px;
+    display:inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#allOnlineClassImg{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+#allOnlineClassImg img{
+    width:800px;
+    height:auto; 
+    border-radius: 50px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+#allOnlineClassImg a:hover img{
+    transform: scale(1.03);
+}
+
+.rightTopicHead {
+    display: flex;     
+    align-items: center; 
+    justify-content: space-between;
+    margin-top: 100px; 
+    margin-right: 40px;
+}
+
+.viewAllBtn a {
+        padding: 15px 20px;  
+        border-radius: 5px;
+        background-color: black;
+        color: yellow;
+        text-align: left;      
+        margin: 0px;    
+        font-weight:bold;
+        display:inline-block;
+        text-decoration: none;
+        white-space: nowrap;
+}
+
+.viewAllBtn a:hover {
+        background-color: #ffc56a;
+        color: #042234;
+    }
+
+
+#featuredClass, .rightTopic {
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#featuredImg, .rightTopicImg {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap; /* This allows the items to wrap onto the next line if there isn't enough space in the current line */
+    gap: 20px; /* This give gap between images */
+}
+
+#featuredImg a, .rightTopicImg a {
+    width: calc(33.33% - 20px); /* Assign width to anchor tags */
+    text-decoration: none; /* Optional: Removes underline from links */
+}
+
+#featuredImg img, .rightTopicImg img {
+    width: 100%;
+    border-radius: 30px;
+    height: auto; /* Ensure the original image aspect ratio */
+    aspect-ratio: 1/1; /* Works the same with just 1, but 1/1 represented height and width (square) */
+    object-fit: cover; /* This will ensure the image covers the entire space without distortion */
+    transition: transform 0.5s ease;
+}
+
+
+#featuredImg a:hover img, .rightTopicImg a:hover img {
+    transform: scale(1.03); /* Scale up the image when mouse hover */
+    cursor: pointer;
+}
+
+/* The text in the middle of photo */
+
+/* All Online Classes Right Part */
+#imageTextAOC {
+    position: relative;
+    display: inline-block;
+}
+
+#imageTextAOC img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#classNameAOC {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark grey background with some transparency */
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 60px;
+    text-align: center;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+#imageTextAOC:hover #classNameAOC{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Main Content Part*/
+.imageText {
+    position: relative;
+    width: calc(33.33% - 10px);
+    display: inline-block;
+}
+.imageText img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+.className {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark grey background with some transparency */
+    padding: 20px;
+    width: 80%;
+    max-width: 200px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+}
+.imageText:hover .className{
+    visibility: visible;
+    opacity: 1;
+}

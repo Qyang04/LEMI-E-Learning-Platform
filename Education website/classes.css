@@ -1,0 +1,43 @@
+html, body {
+    margin:0;
+    padding:0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+}
+
+/* Full body part, easier for tuning */
+#mainBody {
+    display: flex;
+    min-height: 100vh;
+}
+
+#leftBody {
+    float: left;
+    width: 220px;
+    box-sizing: border-box;
+    background-color: #cb9c4e;
+    padding-right: 100px;
+}
+
+#rightBody {
+    flex-grow: 1;
+}
+
+.clearfix::after {  /* To clear the float */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Main Content on right side */
+.mainContent{
+    flex:1;
+    padding: 24px 0 0 48px;
+}
+
+.mainContent iframe{
+    width: 560px;
+    height: 315px;
+    margin: 6px 0 24px 0;
+}
